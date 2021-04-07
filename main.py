@@ -31,3 +31,7 @@ st.pyplot(fig)
 my_file = st.file_uploader("Upload some file")
 if my_file is not None:
     st.text(my_file.getvalue().decode('utf-8').rstrip())
+
+st.markdown("""
+THE END
+""")
