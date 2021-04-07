@@ -3,22 +3,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
+st.title("Test app. Денис пидор")
+
 df = pd.DataFrame({'x': [10, 20, 30, 40],
                    'y': [100, 200, 300, 400],
                    'name': ['alpha', 'beta', 'gamma', 'delta']
                    })
 
 x_max = st.slider('Max value of x', float(df['x'].max()))
-st.title("My streamlit app")
-st.markdown("""
-Let's look at this fine dataframe
-""")
 
 df[df['x'] <= x_max]
-
-st.markdown("""
-## Now let's draw something
-""")
 
 a = st.slider('Amplitude', 0., 10.)
 b = st.slider('Frequency', 0., 10.)
@@ -27,10 +21,6 @@ fig = plt.figure()
 plt.plot(x, a * np.sin(x * b))
 plt.ylim(-5, 5)
 st.pyplot(fig)
-
-my_file = st.file_uploader("Upload some file")
-if my_file is not None:
-    st.text(my_file.getvalue().decode('utf-8').rstrip())
 
 st.markdown("""
 THE END
