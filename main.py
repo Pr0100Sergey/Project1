@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-st.title("Test app. Денис пидор")
+st.title("Test app")
 
 df = pd.DataFrame({'x': [10, 20, 30, 40],
                    'y': [100, 200, 300, 400],
